@@ -44,6 +44,43 @@ public class Unidad2 {
         // System.out.println("La variable es: " + variable);
         // variable++; // Variable = Variable + 1;
         // System.out.println("La variable es: " + variable);
+        // int valor1=3;
+        // int valor2=5;
+        // valor1+=valor2; // valor1 = valor1 + valor2;
+
+        //Condiciones if-else
+        //     int numero = 3;
+        //     int numero2 = 5;
+
+        //     if (numero > numero2) {
+        //         System.out.println("numero > numero2");
+        //     } else {
+        //         System.out.println("numero < numero2");
+        //     }
+        // }
+
+        // }
+
+        //IF-Else Encadenado
+int dia= 7;
+System.out.println("El día de la semana es: " + dia);
+if (dia == 1) {
+    System.out.println("Lunes");
+} else if (dia == 2) {
+    System.out.println("Martes");
+} else if (dia == 3) {
+    System.out.println("Miércoles");
+} else if (dia == 4) {
+    System.out.println("Jueves");
+} else if (dia == 5) {
+    System.out.println("Viernes");
+} else if (dia == 6) {
+    System.out.println("Sábado");
+} else if (dia == 7) {
+    System.out.println("Domingo");
+
+} 
+
 
 
         //Clase 4:bucles
@@ -66,5 +103,9 @@ public class Unidad2 {
         //     i++;
         // }while(i<0);
 
+    // }
+
+
     }
 }
+
