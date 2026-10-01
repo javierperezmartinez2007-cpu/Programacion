@@ -39,11 +39,32 @@ public class Unidad2 {
         // System.out.println("La suma es: " + utilidades.Matematicas.sumar(numero1, numero2));
         // System.out.println("La multiplicación es: " + utilidades.Matematicas.multiplicar(numero1, numero2));
 
-        System.out.println("El resto de la división 5/2 es: " + (5 % 2));
-        int variable = 2;
-        System.out.println("La variable es: " + variable);
-        variable++; // Variable = Variable + 1;
-        System.out.println("La variable es: " + variable);
+        // System.out.println("El resto de la división 5/2 es: " + (5 % 2));
+        // int variable = 2;
+        // System.out.println("La variable es: " + variable);
+        // variable++; // Variable = Variable + 1;
+        // System.out.println("La variable es: " + variable);
 
-     }
+
+        //Clase 4:bucles
+        // Estructuras: for.
+        // for (int i = 0; i < 3; i++) {
+        //     System.out.println("El valor de i es: " + i);
+        // }
+        //Estructura while
+      
+        // int i = 0;
+        // while (i < 0) {
+        //     System.out.println("El valor de i es: " + i);
+        //     i++;
+        // } // cierra while
+
+        //Estrictura do while
+        // int i = 0;
+        // do{
+        //     System.out.println(i);
+        //     i++;
+        // }while(i<0);
+
     }
+}
