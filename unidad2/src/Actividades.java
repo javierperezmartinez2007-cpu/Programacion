@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class Actividades {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         //Actividad Diapositiva 9 Realiza un programa que genera 2 números y nos diga el cociente, la
 // media, la potencia y la raíz cuadrada. Usa tipos adecuados
@@ -76,17 +79,86 @@ public class Actividades {
 //     }
 
 //Actividad Desarrolla un programa que calcule el factorrial del numero introducido
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Introduce un número para calcular su factorial: ");
+// int numero=sc.nextInt();
+// int producto=1;
+// for(int i=numero; i>=1; i--)
+
+// {
+//     producto*=i;
+
+//     System.out.println("El factorial de " + numero + " es: " + producto);
+
+//     }
+
+// Actividad edad y menor hasta -1
+// int maximo=0 ,minimo=0, numero=0 ,contador=0; 
+// int contadorMayores=0, suma=0, total=0;
+// double media=0;
+// Scanner sc = new Scanner(System.in);
+// //Repetir hasta leer -1
+// do{
+//     System.out.println("Escribe la edad: ");
+//     numero=sc.nextInt(); sc.nextLine();
+//     if(contador==0){
+//         maximo=numero;
+//         minimo=numero;
+//         contador++;
+       
+//     }
+//     if(numero>maximo){
+//         maximo=numero;
+//     }
+//     if((numero<minimo) && (numero != -1)) {
+//         minimo = numero;
+    
+//     }
+//     if(numero != -1) {
+//         suma += numero;
+//         total++;
+//     }
+//     suma+=numero;
+//     total++;
+//     if(numero>18){
+//         contadorMayores++;
+//     }
+// } while (numero != -1);
+
+// // imprimir el maximo y minimo
+//     System.out.println("El número máximo es: " + maximo);
+//     System.out.println("El número mínimo es: " + minimo);
+//     System.out.println("La suma de las edades es: " + suma);
+//     System.out.println("La media de las edades es: " +  (suma / (double) total));
+//     System.out.println("El número de personas mayores de 18 años es: " + contadorMayores);
+//     System.out.println("El número total de personas es: " + total);
+
+//Actividad de adivinar un numero entre 1 y 100
+int intentos = 0; 
+int numeroUsuario;
+//numero maximo 100 minimo 1
+int max=100;
+int min=1;
 Scanner sc = new Scanner(System.in);
-System.out.println("Introduce un número para calcular su factorial: ");
-int numero=sc.nextInt();
-int producto=1;
-for(int i=numero; i>=1; i--)
+ int numeroSecreto = (int) (Math.random() * 100) + 1;
 
-{
-    producto*=i;
-
-    System.out.println("El factorial de " + numero + " es: " + producto);
-
+ //Hacer un bucle que se repita hasta que el usuario adivine el número secreto
+// System.out.println("El número secreto es: " + numeroSecreto);
+do{
+    System.out.println("Dime un número entre 1 y 100: ");
+numeroUsuario = sc.nextInt();
+if (numeroUsuario < numeroSecreto) {
+        System.out.println("El número secreto es mayor. Intenta de nuevo: ");
+    } else {
+        System.out.println("El número secreto es menor. Intenta de nuevo: ");
+        
     }
+}
+while (numeroUsuario != numeroSecreto);
+    System.out.println("El número secreto es: " + numeroSecreto);
+    System.out.println("Numeros de intentos: " + intentos);
+
+
+
 }
 }
