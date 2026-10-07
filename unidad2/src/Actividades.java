@@ -14,8 +14,9 @@ public class Actividades {
     public static double suma(double a, double b){
         return a+b;
     }
+}
 
-    public static void actividad1(){
+public static void actividad1(){
                 //Actividad Diapositiva 9 Realiza un programa que genera 2 números y nos diga el cociente, la
 // media, la potencia y la raíz cuadrada. Usa tipos adecuados
         
@@ -32,7 +33,7 @@ public class Actividades {
         System.out.println("Las raices cuadradas son: " + Math.sqrt(aleatorio1) + " y " + Math.sqrt(aleatorio2)); 
     }
 
-    public static void actividad2(){
+public static void actividad2(){
          //Actividad de pedir dia mes y año y decir si es correcto o no y año bisiesto
    
          Scanner sc = new Scanner(System.in);
@@ -45,7 +46,7 @@ public class Actividades {
  año = sc.nextInt(); 
     }
 
-    public static void actividad3(){
+public static void actividad3(){
 //         int dia, mes, año;
 // if(dia>0 && dia<=31 && mes>0 && mes<=12 && año>0){
 //     if(dia==29 && mes==2){//Comprobar si el año es bisiesto
@@ -60,6 +61,119 @@ public class Actividades {
     // }
 
 }
+
+public static void actividad4(){ //Actividad de bucles del multiplos de 2 y 3 entre 50 y 200
+    for (int i = 50; i <= 200; i++) {
+    if (i % 2 == 0 && i % 3 == 0) {
+        System.out.println(i + " es múltiplo de 2 y de 3.");
+     
+}
+    }
+}
+
+public static void atividad5(){//Actividad Desarrolla un programa que calcule el factorrial del numero introducido
+    Scanner sc = new Scanner(System.in);
+System.out.println("Introduce un número para calcular su factorial: ");
+int numero=sc.nextInt();
+int producto=1;
+for(int i=numero; i>=1; i--)
+
+{
+    producto*=i;
+
+    System.out.println("El factorial de " + numero + " es: " + producto);
+
+    }
+}
+
+public static void actividad6(){ // Actividad edad y menor hasta -1
+    int maximo=0 ,minimo=0, numero=0 ,contador=0; 
+int contadorMayores=0, suma=0, total=0;
+double media=0;
+Scanner sc = new Scanner(System.in);
+//Repetir hasta leer -1
+do{
+    System.out.println("Escribe la edad: ");
+    numero=sc.nextInt(); sc.nextLine();
+    if(contador==0){
+        maximo=numero;
+        minimo=numero;
+        contador++;
+       
+    }
+    if(numero>maximo){
+        maximo=numero;
+    }
+    if((numero<minimo) && (numero != -1)) {
+        minimo = numero;
+    
+    }
+    if(numero != -1) {
+        suma += numero;
+        total++;
+    }
+    suma+=numero;
+    total++;
+    if(numero>18){
+        contadorMayores++;
+    }
+} while (numero != -1);
+    System.out.println("El número máximo es: " + maximo);
+    System.out.println("El número mínimo es: " + minimo);
+    System.out.println("La suma de las edades es: " + suma);
+    System.out.println("La media de las edades es: " +  (suma / (double) total));
+    System.out.println("El número de personas mayores de 18 años es: " + contadorMayores);
+    System.out.println("El número total de personas es: " + total);
+}
+
+public static void actividad7(){ //Actividad de adivinar un numero entre 1 y 100
+int intentos = 0; 
+int numeroUsuario;
+//numero maximo 100 minimo 1
+int max=100;
+int min=1;
+Scanner sc = new Scanner(System.in);
+ int numeroSecreto = (int) (Math.random() * 100) + 1;
+
+ //Hacer un bucle que se repita hasta que el usuario adivine el número secreto
+// System.out.println("El número secreto es: " + numeroSecreto);
+do{
+    System.out.println("Dime un número entre 1 y 100: ");
+numeroUsuario = sc.nextInt();
+if (numeroUsuario < numeroSecreto) {
+        System.out.println("El número secreto es mayor. Intenta de nuevo: ");
+    } else {
+        System.out.println("El número secreto es menor. Intenta de nuevo: ");
+        
+    }
+}
+while (numeroUsuario != numeroSecreto);
+    System.out.println("El número secreto es: " + numeroSecreto);
+    System.out.println("Numeros de intentos: " + intentos);
+
+}
+
+public static void actividad8(){ //blucles anidados y funciones
+for (int i = 1; i <= 4; i++) {
+    if(i%2==0){//mostrar los pares
+    }
+    {for (int j = i; j <= 4; j++) {
+        System.out.print("*");
+    }
+    System.out.println();
+    }
+}
+}
+
+public static void actividad9(){ //hacer tablas de multiplicar del 1 al 10
+    for (int i = 1; i <= 10; i++) {
+    System.out.println("Tabla del " + i + ":");
+    for (int j = 1; j <= 10; j++) {
+        System.out.println(i + " x " + j + " = " + (i * j));
+    }
+}
+}
+
 public static int maximo(int valor1, int valor2){
     int maximo;
     if(valor1>= valor2){
@@ -69,7 +183,9 @@ public static int maximo(int valor1, int valor2){
     }
     return maximo;
 }
+
 final static double PI = 3.14159265358979323846;
+
 public static void areacilindro(double radio, double altura){
     double area = 2 * PI * radio * (radio + altura);
     System.out.println("El área del cilindro es: " + area);
@@ -80,115 +196,31 @@ public static void volumencilindro(double radio, double altura){
     System.out.println("El volumen del cilindro es: " + volumen);
 }
 
+//Actividad divisibles 2y3 y si es par
+public static boolean espar( int numero){
+   if (numero%2==0) return true;
+   else{return false;}
+}
+public static boolean esDivisible2y3(int numero){
+    if ( numero%2==0 && numero%3==0) {
+        return true;} 
+    else{
+        return false;}
+    
+}
+public static void imprimirNumero(int inicio,int fin){
+    for (int i=inicio; i<=fin; i++){
+        if(espar(i)&& esDivisible2y3(i)){
+            System.out.print(i+",");
+
+        }
+    }
+    System.out.println();
+}
+
 public static void main(String[] args) {
 
-// if(dia>0 && dia<=31 && mes>0 && mes<=12 && año>0){
-//     if(dia==29 && mes==2){//Comprobar si el año es bisiesto
-//         boolean bisiesto = (año % 4 == 0 && año % 100 != 0) || (año % 400 == 0);
-//         if(!bisiesto){
-//             System.out.println("La fecha introducida es correcta.");
-//             return;
-//             else{
-//                 System.out.println("La fecha introducida es correcta.");
-//             }
-//         }
-//     }
 
-//     else if(dia>30 && (mes==4 || mes==6 || mes==9 || mes==11)){
-//         System.out.println("La fecha introducida no es correcta.");
-//         return;
-//     }
-    
-
-//Actividad de bucles del multiplos de 2 y 3 entre 50 y 200
-// for (int i = 50; i <= 200; i++) {
-//     if (i % 2 == 0 && i % 3 == 0) {
-//         System.out.println(i + " es múltiplo de 2 y de 3.");
-     
-// }
-
-    
-//     }
-
-//Actividad Desarrolla un programa que calcule el factorrial del numero introducido
-// Scanner sc = new Scanner(System.in);
-// System.out.println("Introduce un número para calcular su factorial: ");
-// int numero=sc.nextInt();
-// int producto=1;
-// for(int i=numero; i>=1; i--)
-
-// {
-//     producto*=i;
-
-//     System.out.println("El factorial de " + numero + " es: " + producto);
-
-//     }
-
-// Actividad edad y menor hasta -1
-// int maximo=0 ,minimo=0, numero=0 ,contador=0; 
-// int contadorMayores=0, suma=0, total=0;
-// double media=0;
-// Scanner sc = new Scanner(System.in);
-// //Repetir hasta leer -1
-// do{
-//     System.out.println("Escribe la edad: ");
-//     numero=sc.nextInt(); sc.nextLine();
-//     if(contador==0){
-//         maximo=numero;
-//         minimo=numero;
-//         contador++;
-       
-//     }
-//     if(numero>maximo){
-//         maximo=numero;
-//     }
-//     if((numero<minimo) && (numero != -1)) {
-//         minimo = numero;
-    
-//     }
-//     if(numero != -1) {
-//         suma += numero;
-//         total++;
-//     }
-//     suma+=numero;
-//     total++;
-//     if(numero>18){
-//         contadorMayores++;
-//     }
-// } while (numero != -1);
-
-// // imprimir el maximo y minimo
-//     System.out.println("El número máximo es: " + maximo);
-//     System.out.println("El número mínimo es: " + minimo);
-//     System.out.println("La suma de las edades es: " + suma);
-//     System.out.println("La media de las edades es: " +  (suma / (double) total));
-//     System.out.println("El número de personas mayores de 18 años es: " + contadorMayores);
-//     System.out.println("El número total de personas es: " + total);
-
-//Actividad de adivinar un numero entre 1 y 100
-// int intentos = 0; 
-// int numeroUsuario;
-// //numero maximo 100 minimo 1
-// int max=100;
-// int min=1;
-// Scanner sc = new Scanner(System.in);
-//  int numeroSecreto = (int) (Math.random() * 100) + 1;
-
-//  //Hacer un bucle que se repita hasta que el usuario adivine el número secreto
-// // System.out.println("El número secreto es: " + numeroSecreto);
-// do{
-//     System.out.println("Dime un número entre 1 y 100: ");
-// numeroUsuario = sc.nextInt();
-// if (numeroUsuario < numeroSecreto) {
-//         System.out.println("El número secreto es mayor. Intenta de nuevo: ");
-//     } else {
-//         System.out.println("El número secreto es menor. Intenta de nuevo: ");
-        
-//     }
-// }
-// while (numeroUsuario != numeroSecreto);
-//     System.out.println("El número secreto es: " + numeroSecreto);
-//     System.out.println("Numeros de intentos: " + intentos);
 
 //Actividades de programacion
 //Actividad 1:Escribe un programa que imprima buenos días, buenas tardes y buenas noches según la hora
@@ -207,34 +239,6 @@ public static void main(String[] args) {
 
 // }
 
-//Algoritmo MCD y MCM
 
-// actividades clase 5: blucles anidados y funciones
-// for (int i = 1; i <= 4; i++) {
-//     if(i%2==0){//mostrar los pares
-//     }
-//     {for (int j = i; j <= 4; j++) {
-//         System.out.print("*");
-//     }
-//     System.out.println();
-//     }
-// }
 
-// Actividadad de hacer tablas de multiplicar del 1 al 10
-// for (int i = 1; i <= 10; i++) {
-//     System.out.println("Tabla del " + i + ":");
-//     for (int j = 1; j <= 10; j++) {
-//         System.out.println(i + " x " + j + " = " + (i * j));
-//     }
-// }
-
-// imprimir ("la suma de 3+5 es: ", suma(3,5));
-
-System.out.println (maximo(3,5));
-    areacilindro(3,5);
-    volumencilindro(3,5);   
-    }
-  double radio = 3;
-  double altura = 5;
 }
-
