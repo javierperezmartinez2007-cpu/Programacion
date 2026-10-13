@@ -1,7 +1,11 @@
 import java.time.LocalDateTime;
  import java.util.Scanner;
-
+ 
+ 
 public class Unidad2 {
+
+    
+
     public static void main(String[] args) {
 //          System.out.println("Unidad 2");
 
@@ -105,8 +109,40 @@ public class Unidad2 {
 
     // }
 
-// Clase 5: Bucles anidados
+// Clase 6: Recursividad
 
+// public static long calcularFactorial(int n) {
+//  // Caso base: el factorial de 0 es 1
+//  if (n == 0) {
+//  return 1;
+//  } else {
+//  // Paso recursivo: n * factorial(n-1)
+//  return n * calcularFactorial(n - 1);
+//  }
+// }
+
+//  int a = 254;
+
+// System.out.println(funcion(a, 2));
+// }
+
+// public static int funcion(int num, int pos) {
+//     if (num < 10) {
+//         return num;
+//     } else {
+//         return  (int) Math.pow(10, pos)
+//                 + funcion(num / 10, pos - 1) * (num % 10) ;
+//     }
+// }
+System.out.println(sumaN(2));
+} // cierra main
+
+    public static int sumaN(int N) {
+        if (N == 1) {
+            return 1;
+        } else {
+            return N + sumaN(N - 1);
+        }
     }
-}
 
+} // cierra Unidad2
