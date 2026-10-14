@@ -134,8 +134,34 @@ public class Unidad2 {
 //                 + funcion(num / 10, pos - 1) * (num % 10) ;
 //     }
 // }
-System.out.println(sumaN(2));
-} // cierra main
+// System.out.println(sumaN(2));
+// int edad = -5;
+//  assert edad >= 0 : "Edad incorrecta";
+//  System.out.println("Fin");
+ 
+ //Atender excepciones
+//Depurar programas
+
+ // Ejemplo 1: Error de índice fuera de rango
+ int[] numeros = {10, 20, 30, 40, 50};
+ System.out.println("Elemento en posición 2: " + numeros[2]);
+ System.out.println("Elemento en posición 4: " + numeros[4]); // Error intencional
+
+
+    }
+public void imprimirdivision(){
+    try{
+     int resultado=dividir(10,0);
+    }catch(Exception e){
+    System.out.println("Error");
+    }
+}
+public static int dividir(int numerador, int denominador) throws Exception{
+    
+         return numerador/denominador;
+   
+    
+}
 
     public static int sumaN(int N) {
         if (N == 1) {
