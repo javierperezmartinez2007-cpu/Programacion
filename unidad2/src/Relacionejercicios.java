@@ -323,13 +323,64 @@ System.out.printf("| Sueldo base %15.2f |\n", sueldoBase);
 scanner.close();
 }
 
+public static void Ejercicio7(){ //Introducir numeros enteros hasta poner 0
+    Scanner scanner = new Scanner(System.in);
 
+int numero = 0;
+int positivo = 0;
+int negativo = 0; 
+int contadorTotal = 0;
+double sumaTotal= 0;
+int contadorSietes = 0;
+
+System.out.println("Introduce un numero entero. ");
+do {
+    numero = scanner.nextInt();
+
+//Si se introduce el 0 no lo procesara como estadistica
+if (numero != 0){
+    contadorTotal++;
+    sumaTotal += numero;
+}
+//Comprobar si es positivo o negativo
+if (numero > 0){
+    positivo++;
+}else {
+    negativo++;
+}
+//Comprobar si es un 7 o un -7
+if ( numero == 7 || numero == -7){
+    contadorSietes++;
+
+}
+} while (numero != 0); // El bucle que se repite mientras el numero no sea 0
+
+//Resultados finales
+System.out.println("\n--- RESULTADOS ---");
+        System.out.println("Has introducido " + positivo + " números positivos.");
+        System.out.println("Has introducido " + negativo + " números negativos.");
+
+        // Evitamos el error matemático de dividir entre cero si solo introducen un 0 al principio
+        if (contadorTotal > 0) {
+            double media = sumaTotal / contadorTotal;
+            System.out.printf("La media de los números es: ", media);
+        } else {
+            System.out.println("No se ha introducido ningún número para calcular la media.");
+        }
+
+        System.out.println("El número 7 o -7 se ha repetido: " + contadorSietes + " veces.");
+    
+
+
+scanner.close();
+}
 
 
 }
 
 public static void main(String[] args) {
 Scanner scanner = new Scanner(System.in);
+
 
 
 scanner.close();
