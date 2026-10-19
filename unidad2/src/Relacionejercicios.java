@@ -375,16 +375,63 @@ System.out.println("\n--- RESULTADOS ---");
 scanner.close();
 }
 
+public static void Ejercicio8(){ //Ejercicio de la de la serie de Fibonacci. 
+    Scanner scanner = new Scanner(System.in);
+System.out.print("Introduce cuántos números de la serie quieres ver (n): ");
+        int n = scanner.nextInt();
+    int a= 0;
+    int b =1;
+System.out.println("La serie de Fibonacci es:");
 
-}
+        // 3. Uso un bucle 'for' para repetir el proceso 'n' veces
+        for (int i = 1; i <= n; i++) {
+            
+            // Imprimo el número actual (a) seguido de un espacio
+            System.out.print(a + " ");
 
-public static void main(String[] args) {
-Scanner scanner = new Scanner(System.in);
+            // 4. Calculo el siguiente número sumando los dos anteriores
+            int siguiente = a + b;
+
+            // 5. Actualizo las variables para la siguiente vuelta
+            a = b;         
+            b = siguiente; 
+        }
 
 
 
 scanner.close();
-} 
+}
+
+public static boolean Ejercicio9(int n) {//Ejercicio numeros primos
+        boolean primo = true;
+       if (n <= 1) {
+            primo = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    primo = false;
+                    break;
+                }
+            }
+        }
+        return primo;
+
+}
+
+
+
+    // 2. Tu programa principal
+    public static void main(String[] args) {
+        System.out.println("Números primos entre 1 y 100:");
+
+        for (int i = 1; i <= 100; i++) {
+            if (Ejercicio9(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    } 
+}
+
 
 
 
