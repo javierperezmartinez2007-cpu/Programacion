@@ -16,8 +16,7 @@ public class Actividades {
     }
 }
 
-public static void actividad1(){
-                //Actividad Diapositiva 9 Realiza un programa que genera 2 números y nos diga el cociente, la
+public static void actividad1(){ //Actividad Diapositiva 9 Realiza un programa que genera 2 números y nos diga el cociente, la
 // media, la potencia y la raíz cuadrada. Usa tipos adecuados
         
        // Generar dos números de manera aleartoria
@@ -73,7 +72,7 @@ public static void actividad4(){ //Actividad de bucles del multiplos de 2 y 3 en
 
 public static void atividad5(){//Actividad Desarrolla un programa que calcule el factorrial del numero introducido
     Scanner sc = new Scanner(System.in);
-System.out.println("Introduce un número para calcular su factorial: ");
+ System.out.println("Introduce un número para calcular su factorial: ");
 int numero=sc.nextInt();
 int producto=1;
 for(int i=numero; i>=1; i--)

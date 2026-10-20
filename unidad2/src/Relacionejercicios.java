@@ -418,21 +418,49 @@ public static boolean Ejercicio9(int n) {//Ejercicio numeros primos
 
 }
 
-
-
-    // 2. Tu programa principal
-    public static void main(String[] args) {
-        System.out.println("Números primos entre 1 y 100:");
-
-        for (int i = 1; i <= 100; i++) {
-            if (Ejercicio9(i)) {
-                System.out.print(i + " ");
-            }
+//Ejercicio 10
+public static int contarPares(int N){ //Funcion para contar los pares (Ejercicio 10)
+    int contador = 0;
+    if ( N == 0){ //Por si el usuario mete un 0
+        return 1;
+    }
+    while (N > 0){ //Bucle para extraer cada digito
+        int digito = N % 10; 
+        if (digito % 2 == 0){ //Si el resto entre dos es 0, es par.
+            contador++;
         }
-    } 
+        N = N / 10; //Elimino ls ultima cifra ya analizada
+    }
+    return contador; //Devuelve el total de pares encontrados.
 }
 
+public static int contarImpares(int n){//Funcion para contar los impares (Ejercicio 10)
+    int contador = 0;
+    while (n > 0){ //Bucle para extraer cada digito
+        int digito = n % 10;
+        if (digito % 2 != 0){
+            contador++;
+        }
+    n = n / 10; // Elimino la ultima cifra
+    }
+    return contador; //Deveulve el total de impares encontrados
+}
+    // 2. Tu programa principal
+    public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Introduce un número entero: ");
+    int numero = scanner.nextInt();
 
+    int pares = contarPares(numero);
+    int impares = contarImpares(numero);
+
+    System.out.println("El " +numero+ " contiene " + pares + " digitos pares y " + impares + " digitos impares."  );
+    
+    scanner.close();
+    
+}
+
+}
 
 
 
