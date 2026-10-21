@@ -445,7 +445,7 @@ public static int contarImpares(int n){//Funcion para contar los impares (Ejerci
     }
     return contador; //Deveulve el total de impares encontrados
 }
-    // 2. Tu programa principal
+
     public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Introduce un número entero: ");
