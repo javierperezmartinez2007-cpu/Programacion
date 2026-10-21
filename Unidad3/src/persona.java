@@ -1,76 +1,60 @@
 public class persona {
-    //Atributos
-    String nombre;
-    int Edad;
-    double estatura;
-    final String DNI;
+    //atributos
+    private String nombre;
+    private int edad;
+    private double estatura;
+    private final String DNI="111111111111A";
 
     //Constructor
-
-    public persona (){
-        this.DNI = ""; } //Constructor por defecto
-    public persona (String nombre, int edad, double estatura) {
-        this.DNI = "";
+    public persona(){ }//Constructor por defecto
+    public persona(String nombre, int edad, double estatura) {//Constructor por parámetros
         this.nombre = nombre;
-     this.Edad = edad;
+        this.edad = edad;
         this.estatura = estatura;
     }
-    // public Persona (Persona otra){
-        
-    
-    //metodos
-    public void setNombre(String nombre){
-        this.nombre=nombre;
+    public persona(persona otra){//Constructor por copia
+        this.nombre=otra.getNombre();
+        this.edad=otra.getEdad();
+        this.estatura=otra.getEstatura();
     }
-public void setEdad(int Edad){
-    this.Edad=Edad;
-}
 
-public void  setEstura(double estatura){
-        this.estatura=estatura;
-}
+    //Métodos
     
     public void saludar(){
-        System.out.println("Hola a todos, soy " +this.nombre);
+        System.out.println("Hola a todos, soy "+nombre);
+    }
+    public void presentacion(){
+        System.out.println("Hola a todos, soy "+nombre+", tengo "+edad+" años y mido "+estatura);
+    }
+    
+    
 
-    }
-    public String getNombre(){
-        return this.nombre;
+    public String getNombre() {
+        return nombre;
     }
 
-public int getEdad() {
-        return Edad;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
     public double getEstatura() {
         return estatura;
     }
+
     public void setEstatura(double estatura) {
         this.estatura = estatura;
     }
 
-    public void presentacion(){
-        System.err.println("Hola soy " +nombre  );
-    }
-
-public  void main (String [] arg){
-    persona p=new persona();
-    persona p2=new persona ( "Javier", 18, 1.9) ;
-    //Dar un nombre a la persona
-    p.setNombre("javier");
-    p.saludar();
-
-    p2.saludar();
+    //main
     
-    //Crear tres personas
-    persona pepa=new persona( "pepa", 20, 1.69);
-    persona miguel=new persona("miguel", 40, 23);
-    persona paco=new persona("Paco", 20, 1.90);
-
-
-    persona otra=pepa;
-    pepa.presentacion();
-    otra.setNombre("Luis");
-    pepa.presentacion();
 }
 
-}
+
