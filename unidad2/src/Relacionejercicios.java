@@ -1,12 +1,15 @@
 import java.util.Scanner;
+import java.time.LocalDateTime;
 
 public class Relacionejercicios {
 
 public static void Ejercicio1(){ //Actividad 1 (Buenos dias, Buenas tardes, Buenas noches)
-int hora = 0;
+LocalDateTime ahora = LocalDateTime.now();
+        int hora = ahora.getHour();
+
     if (hora >= 6 && hora <= 12) {
     System.out.println("Buenos días");
-} else if (hora >= 13 && hora <= 20) {
+    } else if (hora >= 13 && hora <= 20) {
     System.out.println("Buenas tardes");
     if (hora >= 21 || hora <= 5) {
         System.out.println("Buenas noches");
@@ -15,7 +18,7 @@ int hora = 0;
 }
 
 public static void Ejercicio2(){//  Escribe un programa que calcule el salario semanal de un trabajador teniendo en cuenta que las
-// horas ordinarias (40 primeras horas de trabajo) se pagan a 12 euros la hora. A partir de la hora 41, se
+    // horas ordinarias (40 primeras horas de trabajo) se pagan a 12 euros la hora. A partir de la hora 41, se
 // pagan a 16 euros la hora
     Scanner scanner = new Scanner(System.in);
 
@@ -173,9 +176,9 @@ else { //Se pide que si se suspende diga si en la recuperación es apto o no
 
 public static void Ejercicio5(){ //Calendario del instituto
     Scanner scanner = new Scanner(System.in);
-int opcion;
+ int opcion;
  
-do {//Para hacer el menu con las opciones
+    do {//Para hacer el menu con las opciones
 System.out.println("MENU de los días de clase");
 System.out.println("1. Lunes");
 System.out.println("2. Martes");
@@ -257,7 +260,7 @@ System.out.println("\n================================ HORARIO COMPLETO ========
         break;
     } 
 } while (opcion != 7); // cierra do y repite mientras la opción no sea 7
-scanner.close();
+ scanner.close();
 }
 
 public static void Ejercicio6(){ //Calculo del sueldo de un trabajador en una empresa
@@ -359,7 +362,7 @@ if ( numero == 7 || numero == -7){
 System.out.println("\n--- RESULTADOS ---");
         System.out.println("Has introducido " + positivo + " números positivos.");
         System.out.println("Has introducido " + negativo + " números negativos.");
-
+        
         // Evitamos el error matemático de dividir entre cero si solo introducen un 0 al principio
         if (contadorTotal > 0) {
             double media = sumaTotal / contadorTotal;
@@ -383,7 +386,7 @@ System.out.print("Introduce cuántos números de la serie quieres ver (n): ");
     int b =1;
 System.out.println("La serie de Fibonacci es:");
 
-        // 3. Uso un bucle 'for' para repetir el proceso 'n' veces
+        
         for (int i = 1; i <= n; i++) {
             
             // Imprimo el número actual (a) seguido de un espacio
@@ -447,24 +450,28 @@ public static int contarImpares(int n){//Funcion para contar los impares (Ejerci
 }
 
     public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Introduce un número entero: ");
-    int numero = scanner.nextInt();
+    // Scanner scanner = new Scanner(System.in);
+    // System.out.println("Introduce un número entero: ");
+    // int numero = scanner.nextInt();
 
-    int pares = contarPares(numero);
-    int impares = contarImpares(numero);
+    // int pares = contarPares(numero);
+    // int impares = contarImpares(numero);
 
-    System.out.println("El " +numero+ " contiene " + pares + " digitos pares y " + impares + " digitos impares."  );
+    //  System.out.println("El " +numero+ " contiene " + pares + " digitos pares y " + impares + " digitos impares."  );
     
-    scanner.close();
+    //  scanner.close();
+//  for (int i = 1; i <= 100; i++) {
+        
+//         if (Ejercicio9(i)) {
+//             System.out.println(i + " es primo");
+//         }
+//     }
+// }
     
+
 }
 
 }
-
-
-
-
 
 
 
