@@ -1,4 +1,4 @@
-public class persona {
+public class Persona {
     //atributos
     private String nombre;
     private int edad;
@@ -6,13 +6,13 @@ public class persona {
     private final String DNI="111111111111A";
 
     //Constructor
-    public persona(){ }//Constructor por defecto
-    public persona(String nombre, int edad, double estatura) {//Constructor por parámetros
+    public Persona(){ }//Constructor por defecto
+    public Persona(String nombre, int edad, double estatura) {//Constructor por parámetros
         this.nombre = nombre;
         this.edad = edad;
         this.estatura = estatura;
     }
-    public persona(persona otra){//Constructor por copia
+    public Persona(Persona otra){//Constructor por copia
         this.nombre=otra.getNombre();
         this.edad=otra.getEdad();
         this.estatura=otra.getEstatura();

@@ -1,10 +1,10 @@
     import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
-
-public class Persona2{
-
-
+enum estadoCivil{
+    SOLTERO,CASADO,DIVORCIADO
+}
+public class Persona2 {
     //atributos
     String nombre;
     LocalDate fechaNacimiento;
@@ -12,9 +12,12 @@ public class Persona2{
     String DNI;
     static int hijos;
     Persona2 pareja;
+    estadoCivil estado;
 
     //Constructor por defecto
-    public Persona2(){}
+    public Persona2(){
+        this.estado=estadoCivil.SOLTERO;
+    }
     //Constructor por parámetros
     public Persona2(String DNI,String fecha){
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -38,6 +41,9 @@ public class Persona2{
         this.hijos=hijos;
     }
 
+    public estadoCivil getEstado() {
+        return estado;
+    }
     public String getNombre() {
         return nombre;
     }
@@ -55,6 +61,9 @@ public class Persona2{
     }
     public void setEstatura(double estatura) {
         this.estatura = estatura;
+    }
+    public void setEstado(estadoCivil estado) {
+        this.estado = estado;
     }
     public String getDNI() {
         return DNI;
@@ -74,8 +83,39 @@ public class Persona2{
     public static void imprime(){
         System.out.println("HOLA");
     }
-    
+    public void imprimePersona(){
+        System.out.println("Te llamas: "+this.nombre);
+        System.out.println("Mides: "+this.estatura);
+        System.out.println("TU DNI es: "+this.DNI);
+        System.out.println("Naciste el día: "+this.fechaNacimiento);
+        System.out.println("Número de hijos"+this.hijos);
+        if(pareja!=null){
+            System.out.println("Su pareja tiene el nombre: "+this.pareja.getNombre());
+            System.out.println("Mides: "+this.pareja.getEstatura());
+            System.out.println("TU DNI es: "+this.pareja.getDNI());
+            System.out.println("Naciste el día: "+this.pareja.getFechaNacimiento());
+        }
+    }
+    public void imprimeconString(){
+        System.out.println("Te llamas: "+this.nombre);
+        System.out.println("Mides: "+this.estatura);
+        System.out.println("TU DNI es: "+this.DNI);
+        System.out.println("Naciste el día: "+this.fechaNacimiento);
+        System.out.println("Número de hijos"+this.hijos);
+        System.out.println("Los datos de tu pareja son: "+this.pareja);
+    }
 
+    public void imprimeSoltero(){
+        if(estado==estadoCivil.SOLTERO){
+            System.out.println(this);
+        }
+    }
+    @Override
+    public String toString() {
+        return "Persona2 [nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + ", estatura=" + estatura
+                + ", DNI=" + DNI + "]";
+
+    }
     // public void asignaPareja(Persona2 pareja){
     //     this.pareja=pareja;
     // }
@@ -85,7 +125,14 @@ public class Persona2{
         Persona2 p2=new Persona2("12345678B","01/07/1987");
         p2.setPareja(p);
         p.setPareja(p2);
+        // p.imprimePersona();
+        p2.imprimeconString();
 
+        p2.setNombre("Domingo");
+        p.setNombre("María");
+        p2.imprimeconString();
+        p2.setEstado(estadoCivil.CASADO);
+
+        p2.imprimeSoltero();
     }
 }
-
