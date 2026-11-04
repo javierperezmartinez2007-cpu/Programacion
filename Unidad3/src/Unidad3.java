@@ -1,3 +1,5 @@
+import Utilidades.Matematicas;
+
 public class Unidad3 {
 
 
@@ -28,5 +30,6 @@ public class Unidad3 {
         Persona2.imprime();
         Persona2 nueva=new Persona2("12345", "21/10/2026");
         nueva.imprime();
+        int x=Matematicas.sumar(2,3);
     }
 }
