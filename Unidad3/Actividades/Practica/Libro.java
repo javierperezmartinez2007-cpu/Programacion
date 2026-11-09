@@ -1,11 +1,13 @@
-package Unidad3.Actividades.Practica;
+
 
 public class Libro {
-    private String isbn;
+    // private String isbn;
+    //   private String isbn;
     private String titulo;
     private int anio;
     private double precio;
     private Editorial ed;
+    private String isbn;
 
     //Constructores
     public Libro(){}

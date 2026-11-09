@@ -60,27 +60,27 @@ public class Fichero {
         // }
 
         // //LECTURA DE NÚMEROS CON DELIMITADORES
-        try{
-            Scanner leer = new Scanner(new File("./ejemplo.txt"));
-            String linea;
+        // try{
+        //     Scanner leer = new Scanner(new File("./FicheroEjemplo.txt"));
+        //     String linea;
             
-            while(leer.hasNextLine()){
-                linea=leer.nextLine();
-                System.out.println(linea);
-                Scanner sc = new Scanner(linea);//Procesar la línea leída
-                sc.useDelimiter("[a-z?;\\s/]+");//filtro lo que quiero leer
-                int numero1=sc.nextInt();
-                int numero2=sc.nextInt();
-                int numero3=sc.nextInt();
-                System.out.println(numero1+"-"+numero2+"-"+numero3);
-            }
-            leer.close();
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
+        //     while(leer.hasNextLine()){
+        //         linea=leer.nextLine();
+        //         System.out.println(linea);
+        //         Scanner sc = new Scanner(linea);//Procesar la línea leída
+        //         sc.useDelimiter("[a-z?;\\s/]+");//filtro lo que quiero leer
+        //         int numero1=sc.nextInt();
+        //         int numero2=sc.nextInt();
+        //         int numero3=sc.nextInt();
+        //         System.out.println(numero1+"-"+numero2+"-"+numero3);
+        //     }
+        //     leer.close();
+        // }catch(Exception e){
+        //     System.out.println(e.getMessage());
+        // }
 
         //Procesar un archivo de un juego que dice victorias de jugadores
-        // leerDatos("./victorias.txt");
+        leerDatos("./Victoras.txt");
 
 
 
@@ -116,3 +116,5 @@ public class Fichero {
         }
     }
 }
+  
+

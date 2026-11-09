@@ -1,4 +1,4 @@
-package Unidad3.src;
+
 
 public class persona {
     //atributos
@@ -58,5 +58,4 @@ public class persona {
     //main
     
 }
-
 

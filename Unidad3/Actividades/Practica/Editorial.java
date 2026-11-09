@@ -1,4 +1,4 @@
-package Unidad3.Actividades.Practica;
+
 
 public class Editorial {
     private int codigo;

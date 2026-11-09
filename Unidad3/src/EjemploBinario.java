@@ -1,4 +1,4 @@
-package Unidad3.src;
+
 import java.io.*;
  
 class EjemploBinario{

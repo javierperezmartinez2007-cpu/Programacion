@@ -1,4 +1,4 @@
-package Unidad3.src;
+
 import java.io.File;
 import java.io.IOException;
 import java.awt.image.BufferedImage;

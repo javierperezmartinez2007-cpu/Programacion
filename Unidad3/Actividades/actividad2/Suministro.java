@@ -1,4 +1,4 @@
-package Unidad3.Actividades.actividad2;
+
 
 public class Suministro {
     private int cantidad;
