@@ -1,3 +1,5 @@
+package Unidad3.src;
+
 public class Vehicle {
     private boolean usedFlag;
     private  String model;

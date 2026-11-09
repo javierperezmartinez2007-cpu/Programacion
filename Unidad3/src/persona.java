@@ -1,3 +1,5 @@
+package Unidad3.src;
+
 public class persona {
     //atributos
     private String nombre;
