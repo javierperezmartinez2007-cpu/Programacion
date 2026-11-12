@@ -1,4 +1,4 @@
-
+package actividad2;
 
 public class Suministro {
     private int cantidad;
