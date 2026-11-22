@@ -1,6 +1,5 @@
 package Unidad3.Actividades.Activdad1;
 
-
 public class CuentaCorriente {
      //Datos miembro
     private String numeroCuenta;

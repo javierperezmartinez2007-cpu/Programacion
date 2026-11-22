@@ -1,4 +1,3 @@
-    
 
 public class Actividad1 {
     public static class Pais{

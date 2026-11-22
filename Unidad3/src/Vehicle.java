@@ -1,3 +1,5 @@
+
+
 public class Vehicle {
     private boolean usedFlag;
     private  String model;

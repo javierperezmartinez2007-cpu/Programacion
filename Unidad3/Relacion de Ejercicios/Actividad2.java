@@ -1,11 +1,9 @@
 public class Actividad2 {
      public static class Racional{
-       private  int numerador;
-       private  int denominador;
+        int numerador;
+        int denominador;
     public Racional(){}
-public void imprimirRacional() {
-        System.out.println(numerador + "/" + denominador);
-    }
+
     public Racional(int numerador, int denominador){
         this.denominador = denominador;
         this.numerador = numerador;
@@ -78,31 +76,7 @@ public Racional dividir(Racional r){
     int nuevoDen = this.denominador * r.numerador;
     return new Racional(nuevoDen, nuevoNum);
 }
-
-public boolean esIgual(Racional r){
-    return (this.numerador * r.denominador) == (r.numerador * this.denominador);
-
-}
     }
-public static void main(String[] args) {
-    Racional r1 = new Racional(2, 4); // Se simplifica automáticamente a 1/2
-        Racional r2 = new Racional(3, 6); // Se simplifica automáticamente a 1/2
 
-        System.out.print("Racional 1: ");
-        r1.imprimirRacional();
+     }
 
-        System.out.print("Racional 2: ");
-        r2.imprimirRacional();
-
-        System.out.println("¿Son iguales r1 y r2? " + r1.esIgual(r2));
-
-        // Probando la suma
-        Racional r3 = new Racional(1, 4);
-        Racional r4 = new Racional(1, 2);
-        Racional suma = r3.sumar(r4);
-        System.out.print("Suma (1/4 + 1/2): ");
-        suma.imprimirRacional(); 
-    }
-}
-
-     

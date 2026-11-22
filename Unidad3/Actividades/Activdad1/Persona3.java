@@ -1,6 +1,4 @@
 package Unidad3.Actividades.Activdad1;
-
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -67,22 +65,6 @@ public class Persona3 {
     }
     public void setSoltero_casado(boolean soltero_casado) {
         this.soltero_casado = soltero_casado;
-    }
-    public void setEdad(int int1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setEdad'");
-    }
-    public void setTelefono(String string) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setTelefono'");
-    }
-    public void setPoblacion(String string) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setPoblacion'");
-    }
-    public void mostrarDatos() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'mostrarDatos'");
     }    
     
 }

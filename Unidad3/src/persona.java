@@ -1,3 +1,5 @@
+
+
 public class persona {
     //atributos
     private String nombre;
@@ -56,5 +58,4 @@ public class persona {
     //main
     
 }
-
 
