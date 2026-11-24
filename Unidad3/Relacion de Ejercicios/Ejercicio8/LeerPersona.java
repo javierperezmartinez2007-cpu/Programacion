@@ -1,40 +1,51 @@
 
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class LeerPersona {
     public static void main(String[] args) {
         // Ajusta la ruta si ejecutas desde otra carpeta distinta a Ejercicio8
-        String rutaFichero = "personas.csv";
+        String rutaFichero =  "C:\\Users\\javie\\OneDrive\\Desktop\\Programaci-n\\Unidad3\\Relacion de Ejercicios\\Ejercicio8\\personas.csv";
 
         // Creamos la persona vacía
         Persona5 persona = new Persona5();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\javie\\OneDrive\\Desktop\\Programaci-n\\Unidad3\\Relacion de Ejercicios\\Ejercicio8\\personas.csv"))) {
-            String linea;
+     
+// C:\\Users\\javie\\OneDrive\\Desktop\\Programaci-n\\Unidad3\\Relacion de Ejercicios\\Ejercicio8\\personas.csv"
+        Persona5 persona1 = new Persona5();
+File fichero = new File(" C:\\Users\\javie\\OneDrive\\Desktop\\Programaci-n\\Unidad3\\Relacion de Ejercicios\\Ejercicio8\\personas.csv");
 
-            while ((linea = br.readLine()) != null) {
-                if (linea.trim().isEmpty()) {
-                    continue;
-                }
+try (Scanner lector = new Scanner(fichero)) {
+    while (lector.hasNextLine()) {
+        String linea = lector.nextLine();
 
-                String[] partes = linea.split(";");
+        int p1 = linea.indexOf(";");
+        int p2 = linea.indexOf(";", p1 + 1);
+        int p3 = linea.indexOf(";", p2 + 1);
 
-                persona.setNombre(partes[0]);
-                persona.setEdad(Integer.parseInt(partes[1].trim()));
-                persona.setTelefono(partes[2]);
-                persona.setPoblacion(partes[3]);
+        String nombre = linea.substring(0, p1);
+        int edad = Integer.parseInt(linea.substring(p1 + 1, p2));
+        String telefono = linea.substring(p2 + 1, p3);
+        String poblacion = linea.substring(p3 + 1);
 
-                // Mostramos los datos antes de pasar a la siguiente línea
-                persona.mostrarDatos();
-            }
+        persona1.setNombre(nombre);
+        persona1.setEdad(edad);
+        persona1.setTelefono(telefono);
+        persona1.setPoblacion(poblacion);
 
-        } catch (IOException e) {
-            System.out.println("Error al leer el fichero CSV: " + e.getMessage());
-        } catch (NumberFormatException e) {
-            System.out.println("Error al convertir la edad a número: " + e.getMessage());
-        }
+        persona1.mostrarDatos();
+    }
+} catch (FileNotFoundException e) {
+    System.out.println("No se ha encontrado el archivo.");
+
+} catch (NumberFormatException e1) {
+    System.out.println("Error al convertir la edad a número: " + e1.getMessage());
+}
     }
 }
+

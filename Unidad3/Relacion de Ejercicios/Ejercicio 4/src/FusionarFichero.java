@@ -10,7 +10,7 @@ public class FusionarFichero {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        //Pedo que el usuario de las rutas de los ficheros y del directorio
+        //Pido que el usuario de las rutas de los ficheros y del directorio
         try{
            System.out.println("Escribe la ruta del primer fichero"); 
            String ruta1 = scanner.nextLine();

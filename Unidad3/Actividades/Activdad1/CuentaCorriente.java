@@ -1,4 +1,4 @@
-package Unidad3.Actividades.Activdad1;
+package Activdad1;
 
 public class CuentaCorriente {
      //Datos miembro
